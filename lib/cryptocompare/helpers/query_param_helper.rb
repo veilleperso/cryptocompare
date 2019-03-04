@@ -7,7 +7,7 @@ module Cryptocompare
 
     # Appends query parameters to path
     def self.set_query_params(path, opts)
-      path + "?#{to_query(opts)}"
+      path + "?#{to_query(opts)}&api_key=#{ENV['CRYPTOCOMPARE_KEY']}"
     end
 
     # Helper method to parse parameters and build query parameters
